@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Calistoga", cursive;
+  color: var(---abuabu);
+}
+
+:root {
+  ---black: #000;
+  ---whitee: #fff;
+  ---green: #18e122;
+  ---greenLow: #29cf24;
+  ---red: #e33e3e;
+  ---yellow: #dede25;
+  ---abuabu: var(---abuabu);
+}
+body {
+  background: var(---black);
+}
+
+.container_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container_card .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 100px;
+  width: 90%;
+}
+
+.container_card .wrapper .table {
+  background: var(---whitee);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.container_card .wrapper .table .price_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_card .wrapper .table .price_section .price_area {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background: var(---yellow);
+  padding: 3px;
+}
+
+.container_card .wrapper .table.premium .price_section .price_area {
+  background: var(---red);
+}
+
+.container_card .wrapper .table .price_section .price_area .inner_area {
+  height: 100%;
+  width: 100%;
+  background-color: var(---green);
+  border-radius: 50%;
+  border: 3px solid var(---whitee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(---whitee);
+  align-content: flex-end;
+  position: relative;
+}
+
+.container_card .wrapper .table .price_section .price_area .inner_area .text,
+.container_card .wrapper .table .price_section .price_area .inner_area .price {
+  font-size: 2.5em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(---whitee);
+}
+
+.container_card .wrapper .table .price_section .price_area .inner_area .text {
+  margin-right: 3px;
+  font-size: 1.2em;
+  font-weight: 400;
+  position: absolute;
+  top: 35px;
+  left: 16px;
+}
+
+.container_card .wrapper .table .package_name {
+  height: 2px;
+  background-color: var(---green);
+  width: 100%;
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_card .wrapper .table .package_name::before,
+.container_card .wrapper .premium .package_name::before,
+.container_card .wrapper .ultimate .package_name::before {
+  position: absolute;
+  content: "Basic";
+  padding: 5px 10px;
+  background: var(---whitee);
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(---abuabu);
+  letter-spacing: 1px;
+}
+
+.container_card .wrapper .premium .package_name::before {
+  content: "Premium";
+}
+.container_card .wrapper .ultimate .package_name::before {
+  content: "Ultimate";
+}
+
+.container_card .wrapper .table .features {
+  background: var(---whitee);
+  margin-bottom: 20px;
+}
+
+.container_card .wrapper .table .features li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.container_card .wrapper .table .features li .list_name {
+  letter-spacing: 0.5px;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(---abuabu);
+}
+
+.container_card .wrapper .table .features li .list_name::selection {
+  color: var(---greenLow);
+  background: var(---yellow);
+}
+
+.container_card .wrapper .table .features li .icon .fa-check {
+  color: var(---green);
+}
+
+.container_card .wrapper .table .features li .icon .fa-times {
+  color: var(---red);
+}
+
+.container_card .wrapper .table .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_card .wrapper .table .btn button {
+  width: 80%;
+  padding: 10px 0;
+  background: var(---green);
+  color: var(---whitee);
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  border: 2px solid var(---greenLow);
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container_card .wrapper .premium .price_section .price_area .inner_area,
+.container_card .wrapper .premium .package_name,
+.container_card .wrapper .premium .btn button {
+  background: var(---red);
+}
+
+.container_card .wrapper .premium .btn button {
+  border: var(---red);
+}
+
+.container_card .wrapper .table .btn button:hover {
+  color: var(---green);
+  background: var(---whitee);
+  border: 2px solid var(---green);
+}
+
+.container_card .wrapper .ultimate .price_section .price_area .inner_area,
+.container_card .wrapper .ultimate .package_name,
+.container_card .wrapper .ultimate .btn button {
+  background: var(---yellow);
+}
+
+.container_card .wrapper .ultimate .btn button {
+  border: var(---yellow);
+}
+
+.container_card .wrapper .table .btn button:hover {
+  color: var(---green);
+  background: var(---whitee);
+  border: 2px solid var(---green);
+}
+
+.container_card .wrapper .ultimate .btn button:hover {
+  color: var(---yellow);
+  background: var(---whitee);
+  border: 2px solidvar(---yellow);
+}
+
+.container_card .wrapper .table .btn button:active {
+  transform: scale(1.071);
+  color: var(---whitee);
+  background: var(---green);
+  border: 2px solid var(---greenLow);
+}
+
+@media (max-width: 1051px) {
+  .container_card .wrapper {
+    gap: 20px;
+  }
+}
